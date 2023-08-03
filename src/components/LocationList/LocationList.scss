@@ -2,6 +2,6 @@
 
 .location-list {
   @include flexbox();
-  @include justify-content(space-between);
+  @include justify-content(space-evenly);
   @include flex-wrap(wrap);
 }

@@ -1,4 +1,6 @@
 import { useState, MouseEvent } from "react";
+import { notification } from "antd";
+import { SmileOutlined } from "@ant-design/icons";
 
 import { LocationInfo } from "../LocationInfo/LocationInfo";
 import { LocationDetailsModal } from "../LocationDetailsModal/LocationDetailsModal";
@@ -17,6 +19,7 @@ export const LocationCard = ({ location }: TProps) => {
   const [viewsCount, setViewsCount] = useState<number>(0);
   const [isHovering, setIsHovering] = useState<boolean>(false);
   const { isModalOpen, showModal, closeModal } = useModal();
+  const [api, contextHolder] = notification.useNotification();
 
   const handleMouseOver = (): void => {
     setIsHovering(true);
@@ -31,8 +34,18 @@ export const LocationCard = ({ location }: TProps) => {
     showModal();
   };
 
-  const onEditClick = (event: MouseEvent<HTMLDivElement>) => {
+  const showNotification = (): void => {
+    api.open({
+      message: "Editing is not available",
+      description:
+        "At the moment it's just a stub. The editing function has not yet been implemented, because there was no information on this part in the guidelines.",
+      icon: <SmileOutlined style={{ color: "#37B24D" }} />,
+    });
+  };
+
+  const onEditClick = (event: MouseEvent<HTMLDivElement>): void => {
     event.stopPropagation();
+    showNotification();
   };
 
   return (
@@ -58,6 +71,7 @@ export const LocationCard = ({ location }: TProps) => {
         closeModal={closeModal}
         viewsAmount={viewsCount}
       />
+      {contextHolder}
     </>
   );
 };
