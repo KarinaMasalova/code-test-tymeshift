@@ -1,0 +1,67 @@
+@import "../../styles/styles";
+
+$defaultIconSize: 14px;
+$editIconSize: 26px;
+
+.location-card {
+  @include flexbox();
+  @include flex-direction(column);
+  min-width: 270px;
+  position: relative;
+  padding: 15px 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.hovered {
+    background-color: $grey-hovered;
+    cursor: pointer;
+    @include transition(0.2s ease-out);
+  }
+
+  .title {
+    margin-bottom: 5px;
+    text-align: left;
+    @include truncate-text(230px);
+    @include font-settings($size: 18px, $height: 32px);
+    opacity: 0.8;
+  }
+
+  .content {
+    .content-option {
+      @include flexbox();
+      @include align-items(center);
+
+      .icon {
+        width: $defaultIconSize;
+        height: $defaultIconSize;
+        margin-right: 8px;
+      }
+
+      .text {
+        text-align: left;
+        @include font-settings($weight: 500, $height: 24px);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .editing {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    position: absolute;
+    right: 3%;
+    width: $editIconSize;
+    height: $editIconSize;
+    background-color: $white;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid $black10transparency;
+      @include transition(0.2s ease-out);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../styles/styles";
+
+.locations-page {
+  background-color: $white;
+
+  .navigation {
+    border-bottom: 1px solid $border-color;
+    padding: 19px 30px 21px;
+
+    .page-name {
+      text-align: left;
+      @include font-settings($spacing: 0.18px);
+      opacity: 0.3;
+    }
+
+    .category {
+      text-align: left;
+      @include font-settings($weight: 600, $size: 22px);
+      opacity: 0.8;
+    }
+  }
+
+  .locations-results {
+    padding: 25px 60px;
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../styles/styles";
+
+.location-list {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+}
