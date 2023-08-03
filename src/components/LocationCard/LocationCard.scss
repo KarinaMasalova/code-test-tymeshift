@@ -1,6 +1,5 @@
 @import "../../styles/styles";
 
-$defaultIconSize: 14px;
 $editIconSize: 26px;
 
 .location-card {
@@ -26,25 +25,6 @@ $editIconSize: 26px;
     @include truncate-text(230px);
     @include font-settings($size: 18px, $height: 32px);
     opacity: 0.8;
-  }
-
-  .content {
-    .content-option {
-      @include flexbox();
-      @include align-items(center);
-
-      .icon {
-        width: $defaultIconSize;
-        height: $defaultIconSize;
-        margin-right: 8px;
-      }
-
-      .text {
-        text-align: left;
-        @include font-settings($weight: 500, $height: 24px);
-        opacity: 0.8;
-      }
-    }
   }
 
   .editing {

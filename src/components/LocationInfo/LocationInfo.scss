@@ -1,0 +1,22 @@
+@import "../../styles/styles";
+
+$defaultIconSize: 14px;
+
+.location-details {
+  .content-option {
+    @include flexbox();
+    @include align-items(center);
+
+    .icon {
+      width: $defaultIconSize;
+      height: $defaultIconSize;
+      margin-right: 8px;
+    }
+
+    .text {
+      text-align: left;
+      @include font-settings($weight: 500, $height: 24px);
+      opacity: 0.8;
+    }
+  }
+}

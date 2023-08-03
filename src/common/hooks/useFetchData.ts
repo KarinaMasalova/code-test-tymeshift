@@ -21,6 +21,7 @@ export const useFetchData = <T>(url: string): FetchResult<T> => {
           setLoading(false);
           return;
         }
+
         const jsonData = await response.json();
 
         setData(jsonData);

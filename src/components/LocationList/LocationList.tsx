@@ -1,4 +1,5 @@
 import { LocationCard } from "../LocationCard/LocationCard";
+import { Loader } from "../../common/components/Loader/Loader";
 import { useFetchData } from "../../common/hooks/useFetchData";
 import { Location } from "../../common/types/Location";
 
@@ -10,7 +11,7 @@ export const LocationList = () => {
   const { loading, error, data: locations } = useFetchData<Location[]>(URL);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {
@@ -20,12 +21,7 @@ export const LocationList = () => {
   return (
     <ul className="location-list">
       {locations.map((location: Location) => (
-        <LocationCard
-          key={location.id}
-          name={location.name}
-          createdAt={location.createdAt}
-          userCount={location.userCount}
-        ></LocationCard>
+        <LocationCard key={location.id} location={location}></LocationCard>
       ))}
     </ul>
   );
