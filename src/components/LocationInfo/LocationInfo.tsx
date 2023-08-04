@@ -1,3 +1,5 @@
+import moment from "moment";
+
 import { Location } from "../../common/types/Location";
 import usersIcon from "../../assets/icons/Users.svg";
 import timezoneIcon from "../../assets/icons/Timezone.svg";
@@ -11,26 +13,15 @@ type TProps = {
 };
 
 const formatDateToCustomFormat = (isoDate: string): string => {
-  const date: Date = new Date(isoDate);
+  const date = moment(isoDate);
 
-  let hours: number = date.getHours();
-  const minutes: number = date.getMinutes();
+  // format to 12-hour format (e.g., 2:32pm)
+  const time: string = date.format("h:mmA");
 
-  const ampm: string = hours >= 12 ? "pm" : "am";
-  hours = hours % 12 || 12; // handle 12pm
+  // get the timezone offset (e.g., +01:00)
+  const timezoneOffsetFormatted: string = date.format("Z");
 
-  // get timezone offset
-  const timezoneOffsetMinutes: number = date.getTimezoneOffset();
-  const timezoneOffsetHours: number = timezoneOffsetMinutes / 60;
-  const timezoneOffsetFormatted: string =
-    (timezoneOffsetHours <= 0 ? "+" : "-") +
-    ("0" + Math.abs(timezoneOffsetHours)).slice(-2) +
-    ":" +
-    ("0" + Math.abs(timezoneOffsetMinutes % 60)).slice(-2);
-
-  return `${hours}:${("0" + minutes).slice(
-    -2
-  )}${ampm} (GMT${timezoneOffsetFormatted})`;
+  return `${time} (GMT${timezoneOffsetFormatted})`;
 };
 
 export const LocationInfo = ({ data, views }: TProps) => {

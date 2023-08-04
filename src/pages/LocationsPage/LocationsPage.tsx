@@ -8,8 +8,6 @@ export const LocationsPage = () => (
       <h1 className="page-name">All locations</h1>
       <h2 className="category">Acme locations</h2>
     </nav>
-    <section className="locations-results">
-      <LocationList />
-    </section>
+    <LocationList />
   </div>
 );

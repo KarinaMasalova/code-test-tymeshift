@@ -1,2 +1,12 @@
 @import "./variables";
 @import "./mixins";
+
+.ant-notification-notice-content {
+  .ant-notification-notice-message {
+    @include font-settings($weight: 600);
+  }
+
+  .ant-notification-notice-description {
+    @include font-settings($weight: 500);
+  }
+}

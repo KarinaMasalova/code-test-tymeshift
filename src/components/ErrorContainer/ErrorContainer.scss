@@ -1,0 +1,11 @@
+@import "../../styles/mixins";
+
+.error-container {
+  padding: 60px;
+  text-align: center;
+
+  .error-message {
+    @include font-settings($weight: 500, $size: 18px, $height: 32px);
+    opacity: 0.4;
+  }
+}
