@@ -1,0 +1,8 @@
+@import "../../styles/styles";
+
+.location-list {
+  @include flexbox();
+  @include justify-content(space-evenly);
+  @include flex-wrap(wrap);
+  padding: 25px 60px;
+}

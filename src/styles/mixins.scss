@@ -1,0 +1,64 @@
+@import "./variables";
+
+@mixin font-settings($size: 16px, $weight: 700, $spacing: 0, $height: 28px, $color: $black) {
+  font-family: "Lato", sans-serif;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin truncate-text($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin flexbox() {
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -ms-display: -ms-flexbox;
+}
+
+@mixin justify-content($value) {
+  justify-content: $value;
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  -ms-flex-pack: $value;
+}
+
+@mixin align-items($value) {
+  align-items: $value;
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  -ms-flex-align: $value;
+}
+
+@mixin flex-direction($value) {
+  flex-direction: $value;
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  -ms-box-direction: $value;;
+}
+
+@mixin flex-wrap($value) {
+  flex-wrap: $value;
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  -ms-flex-wrap: $value;
+}

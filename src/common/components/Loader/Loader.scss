@@ -1,0 +1,20 @@
+@import "../../../styles/styles";
+
+$dotSize: 35px;
+
+.spinner-container {
+  margin-top: 50px;
+  text-align: center;
+
+  .spinner {
+    .ant-spin-dot {
+      font-size: 80px;
+    }
+
+    .ant-spin-dot-item {
+      background-color: $accent;
+      width: $dotSize;
+      height: $dotSize;
+    }
+  }
+}

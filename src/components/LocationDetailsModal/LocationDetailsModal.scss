@@ -1,0 +1,28 @@
+@import "../../styles/styles";
+
+.location-details-modal {
+  .ant-modal-content {
+    border-radius: 2px;
+    padding: 16px 25px 10px;
+
+    .ant-modal-title {
+      @include font-settings($weight: 600, $height: 24px);
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    .description-section {
+      margin: 20px 0 25px 0;
+
+      .title {
+        @include font-settings($size: 14px, $weight: 600, $height: 24px);
+        opacity: 0.8;
+      }
+
+      .description {
+        @include font-settings($size: 14px, $weight: 400, $height: 24px);
+        opacity: 0.8;
+      }
+    }
+  }
+}

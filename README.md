@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+# Tymeshift - React Code Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech Stack
+- React 18.2.0
+- React Hooks
+- Create React App
+- TypeScript
+- Ant Design
+- Moment.js
+- Git
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Completed Tasks
+- [x] Solution should be written in React
+- [x] All application pages and components should follow the [provided design](https://www.sketch.com/s/e1647b30-8066-43dc-bbf3-5b81d5a01bb2)
+- [x] Implement "All locations" page
+- [x] The data for locations should be retrieved from [this API endpoint](https://6033c4d8843b15001793194e.mockapi.io/api/locations)
+- [x] Show loader when loading data
+- [x] Show notification with the error if the data wasn't received from the API
+- [x] Clicking on a specific location displays a modal with all the properties of that single location
+- [x] The modal is closable
+- [x] Creation date is shown in appropriate format (according to the design)
+- [x] Every location card contains a section "Views" with reactive data
+- [x] The solution is uploaded to GitHub
+- [x] Create custom hooks
+- [x] Show notification by clicking on the edit icon
+      

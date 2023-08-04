@@ -1,0 +1,23 @@
+@import "./styles/styles.scss";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, ol, ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  opacity: 0.3;
+  pointer-events: none;
+}
